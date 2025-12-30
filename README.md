@@ -1,20 +1,27 @@
-# Bacteria Counting App (YOLO)
+# Bacteria Colony Counting App
 
-Python tool that counts bacterial colonies in a plate image using a custom-trained YOLO model.
+Python-based tool for counting bacterial colonies in plate images using a custom-trained YOLO model.
 
-## What’s in this repo
-- `predict_single_image.py` — select an image + ROI, run detection, output count + annotated image
+## Overview
+This project detects and counts dense bacterial colonies from a single image of a culture plate.  
+The workflow allows a user to select an image, define a region of interest (ROI), and automatically
+compute a final colony count while saving an annotated output image.
 
-## What’s NOT included (by design)
-- Trained model weights (`.pt`)
-- Training images/labels
+## Features
+- Single-image colony counting
+- ROI-based detection for improved accuracy
+- Custom-trained YOLO model tuned for small, dense colonies
+- Annotated image output with bounding boxes
+- Configurable confidence and NMS thresholds
 
-These are excluded due to file size and data ownership constraints.
+## Repository Contents
+- `predict_single_image.py` — main script for single-image colony counting
+- Supporting scripts for dataset cleaning, evaluation, and training
 
-## Run (requires weights)
-1) Place your weights here:
-`models/yolo_colonies_best.pt`
+## Model Weights
+Trained model weights are **not stored directly in the repository**.
 
-2) Install dependencies:
-```bash
-pip install ultralytics opencv-python numpy
+Download the trained YOLO model from the **Releases** page:
+- `yolo_colonies_best.pt`
+
+After downloading, place the file in:
