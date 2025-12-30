@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs / runs (your generated results)
+outputs/
+runs/
+
+# Datasets / labels (usually huge)
+out/
+raw/
+*.zip
+
+# Model weights (often too big for GitHub)
+*.pt
+
+# Misc
+*.log
